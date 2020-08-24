@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+
+body.dark {
+  background: hsl(230, 17%, 14%);
+}
+
+.bg-div {
+  background: hsl(225, 100%, 98%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 35vh;
+}
+
+.bg-div.dark {
+  background: hsl(232, 19%, 15%);
+}
+
+.dashbord {
+  padding: 1.5rem 8rem 1.5rem 8rem;
+  position: absolute;
+  top: 6%;
+  width: 100%;
+}
+
+.top-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.top-div p {
+  color: hsl(228, 12%, 44%);
+  font-weight: bold;
+  margin-top: 0.6rem;
+}
+
+.top-div.dark h1 {
+  color: hsl(0, 0%, 100%);
+}
+
+.top-div.dark p {
+  color: hsl(228, 34%, 66%);
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+}
+
+.switcher p {
+  color: hsl(228, 12%, 44%);
+}
+.switch input {
+  opacity: 0;
+}
+.switch {
+  margin-left: 0.5rem;
+  position: relative;
+  width: 3.75rem;
+  height: 2.125rem;
+}
+
+.slider::before {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  height: 1.625rem;
+  width: 1.625rem;
+  border-radius: 50%;
+  background: white;
+  transition: 0.5s;
+  content: "";
+}
+
+.slider {
+  background: hsl(230, 22%, 74%);
+  border-radius: 40px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input:checked + .slider {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:checked + .slider::before {
+  background: hsl(228, 28%, 20%);
+  transform: translateX(26px);
+  transition: 0.5s;
+}
+
+.followers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card.fb::before {
+  background: hsl(208, 92%, 53%);
+}
+.card.tw::before {
+  background: hsl(203, 89%, 53%);
+}
+.card.ig::before {
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.card.yt::before {
+  background: hsl(348, 97%, 39%);
+}
+.card {
+  position: relative;
+  width: 16rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  background: hsl(227, 47%, 96%);
+  text-align: center;
+}
+
+.card.dark {
+  background: hsl(228, 28%, 20%);
+}
+
+.card img {
+  vertical-align: middle;
+  padding: 2rem 0;
+}
+
+.user-name {
+  color: hsl(230, 17%, 14%);
+}
+
+.user-name.dark {
+  color: hsl(228, 34%, 66%);
+}
+.card h1 {
+  font-size: 50px;
+}
+.card.dark h1 {
+  color: hsl(0, 0%, 100%);
+}
+
+.card > p:first-of-type {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(228, 12%, 44%);
+  padding-bottom: 2rem;
+}
+
+.card .num span:first-of-type {
+  right: 65%;
+}
+
+.Overview h1 {
+  color: hsl(228, 12%, 44%);
+  margin: 1rem 0 2rem 0;
+}
+
+.Overview.dark h1 {
+  color: hsl(0, 0%, 100%);
+}
+
+.Overview.dark p {
+  color: hsl(228, 34%, 66%);
+}
+
+.statistic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16rem;
+  height: 8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background: hsl(227, 47%, 96%);
+  padding: 1.5rem;
+}
+
+.overview-card.dark {
+  background: hsl(228, 28%, 20%);
+}
+
+.overview-card .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.num {
+  position: relative;
+}
+.num span:first-of-type {
+  position: absolute;
+  right: 100%;
+  top: 30%;
+  margin-right: 0.6rem;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.num.up span:first-of-type {
+  border-bottom: 8px solid;
+}
+.num.down span:first-of-type {
+  border-top: 8px solid;
+}
+.num.up {
+  color: hsl(163, 72%, 41%);
+}
+
+.num.down {
+  color: hsl(356, 69%, 56%);
+}
+
+.attribution {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.attribution.dark {
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution.dark a {
+  color: hsl(228, 34%, 66%);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(208, 92%, 53%);
+}
+
+/* Mobile Design */
+
+@media screen and (max-width: 1024px) {
+  .dashbord {
+    padding: 1.5rem;
+    top: 2%;
+  }
+
+  .top-div {
+    flex-direction: column;
+  }
+
+  .switcher {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .followers {
+    margin-top: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .overview-card {
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 2rem;
+  }
+}
